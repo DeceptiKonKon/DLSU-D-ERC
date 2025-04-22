@@ -866,6 +866,7 @@ async function handleProtocolForm() {
             // Re-enable the button and reset text regardless of success or failure
             submitButton.disabled = false;
             submitButton.textContent = 'Submit';
+            window.location.href = 'dashboard.html';
         }
     });
 }
