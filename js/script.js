@@ -62,6 +62,7 @@ window.onload = () => {
         const accountType = sessionStorage.getItem('accountType');
         if (accountType == 'student'){
             fetchProtocols();
+            document.getElementById('toggle-slider').style.display = 'none';
         }
         if (accountType == 'erc-secretary') {
             fetchSortedProtocols();
@@ -122,6 +123,7 @@ window.onload = () => {
 
         if (accountType == 'ethics-reviewer') {
             fetchReviewerProtocols();
+            document.getElementById('toggle-slider').style.display = 'none';
             
         }
         if (accountType == 'erc-chair') {
@@ -233,6 +235,9 @@ window.onload = () => {
             const fendDate = new Date(currentDate.getTime() + 24 * 60 * 60 * 1000); // 24 hours later
             fendDateInput.value = fendDate.toISOString().slice(0, 16); // Format to 'YYYY-MM-DDTHH:mm'
 
+            if (accountType == 'student') {
+                document.getElementById('toggle-slider').style.display = 'none';
+            }
 
             if (accountType == 'erc-secretary') {
                             // Add event listeners to buttons
@@ -293,6 +298,7 @@ window.onload = () => {
 
             if (accountType == 'ethics-reviewer') {
                 generateDownloadIcafFilesTable();
+                document.getElementById('toggle-slider').style.display = 'none';
 
             }
             if (accountType == 'erc-chair') {
