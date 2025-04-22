@@ -1223,7 +1223,7 @@ function displayProtocolData(protocol) {
 // Function to generate file table based on EthicsStatus and radio button selection
 function generateFileTable() {
     const ethicsStatus = sessionStorage.getItem('ethicsStatus'); // Get EthicsStatus
-    const addLinkSite = document.querySelector('input[name="add-link-site"]:checked').value === 'no'; 
+    const addLinkSite = document.querySelector('input[name="add-link-site"]:checked').value === 'yes'; 
 
     const filesList = document.getElementById('files-list');
     filesList.innerHTML = ''; // Clear previous rows
